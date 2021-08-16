@@ -26,7 +26,9 @@
     </thead>
     <tbody>
 @foreach (var item in ViewBag.ProductList) {
-    <!--ในส่วนนี้จะต่างกันขึ้นอยู่กับว่าใช้ class ในการนำมาแสดงผล (Project นี้ใช้ ViewBag)-->
+    <!--การรับข้อมูลจากคลาส ViewBag ใน View ของไฟล์ส่วนแสดงผล Index.cshtml โดยที่
+    1.ข้อมูลสินค้ายังคงอยู่ในรูปแบบเป็นชุด (@model IEnumerable<ViewBag.Models.Product)
+    2.วนลูปด้วย foreach อ่านค่าโดยตรงจากคลาส ViewBag (@foreach (var item in ViewBag.ProductList)-->
         <tr>
             <td>
                 @item.ID
